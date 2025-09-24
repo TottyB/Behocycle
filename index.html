@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3csvg width='32' height='32' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3e%3cg fill='none' stroke='%23f43f5e' stroke-width='1.5'%3e%3cpath d='M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2S2 6.477 2 12s4.477 10 10 10Z'/%3e%3cpath stroke-linecap='round' stroke-linejoin='round' d='M9 16s.833-2.5 3-2.5 3 2.5 3 2.5M9.5 9a.5.5 0 1 0 0-1a.5.5 0 0 0 0 1ZM14.5 9a.5.5 0 1 0 0-1a.5.5 0 0 0 0 1Z'/%3e%3c/g%3e%3c/svg%3e" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BEHO Cycle</title>
+    
+    <!-- PWA Meta Tags -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#f43f5e" />
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3csvg width='180' height='180' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3e%3cg fill='none' stroke='%23f43f5e' stroke-width='1.5'%3e%3cpath d='M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2S2 6.477 2 12s4.477 10 10 10Z'/%3e%3cpath stroke-linecap='round' stroke-linejoin='round' d='M9 16s.833-2.5 3-2.5 3 2.5 3 2.5M9.5 9a.5.5 0 1 0 0-1a.5.5 0 0 0 0 1ZM14.5 9a.5.5 0 1 0 0-1a.5.5 0 0 0 0 1Z'/%3e%3c/g%3e%3c/svg%3e" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              'period': 'hsl(340, 82%, 87%)',
+              'period-dark': 'hsl(340, 50%, 30%)',
+              'fertile': 'hsl(174, 72%, 80%)',
+              'fertile-dark': 'hsl(174, 50%, 25%)',
+              'ovulation': 'hsl(174, 90%, 65%)',
+              'ovulation-dark': 'hsl(174, 90%, 30%)',
+              'primary': {
+                '50': '#fff1f2',
+                '100': '#ffe4e6',
+                '200': '#fecdd3',
+                '300': '#fda4af',
+                '400': '#fb7185',
+                '500': '#f43f5e',
+                '600': '#e11d48',
+                '700': '#be123c',
+                '800': '#9f1239',
+                '900': '#881337',
+                '950': '#4c0519',
+              },
+            },
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "recharts": "https://aistudiocdn.com/recharts@^3.2.1",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.20.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').then(registration => {
+            console.log('SW registered: ', registration);
+          }).catch(registrationError => {
+            console.log('SW registration failed: ', registrationError);
+          });
+        });
+      }
+    </script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

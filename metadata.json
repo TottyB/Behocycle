@@ -1,0 +1,6 @@
+{
+  "name": "BEHO Cycle",
+  "version": "1.0.8",
+  "description": "An intelligent, personalized, and secure menstrual cycle tracking app designed to support women and girls in monitoring their menstrual health with features like cycle prediction, symptom tracking, and AI-powered health insights.",
+  "requestFramePermissions": []
+}
